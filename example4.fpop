@@ -1,0 +1,2 @@
+pack a:✱ = File
+  in (open "file") : a

@@ -1,0 +1,11 @@
+let open = (λf:String. (
+      let handle = unsafeOpen f in
+        pack a:○ = UnsafeFH in
+          ( handle
+          , (λh:UnsafeFH. (unsafeRead h, h))
+          , unsafeClose
+          ) : (a, a -> (Char, a), a -> ())
+    )) in
+         unpack a, (h, read, close) = (open "some file") in
+           let (ch, h) = read h in
+             close h

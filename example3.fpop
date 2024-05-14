@@ -1,0 +1,4 @@
+let file = open "some file" in
+let (ch1, file) = read file in
+let (ch2, file) = read file in
+    (close file, (ch1, ch2))
